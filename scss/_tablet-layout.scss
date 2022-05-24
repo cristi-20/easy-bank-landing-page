@@ -1,0 +1,109 @@
+
+@include md {
+// Global Styles
+.hero-description,.features-description,.features-card-description,.card-description {
+    max-width: 35ch;
+}
+
+    // Header
+    .header {
+        background-position:center,0 -250px;
+        background-size:600px,1000px;
+        min-height:80vh;
+       
+        .close-menu-icon {
+            display: none;
+        }
+    
+        .menu-icon {
+            display: none;
+        }
+    
+        // Tablets & Desktop Navigation
+        .nav {
+            .container {
+                grid-template-columns: repeat(3,1fr);
+                align-items: center;
+            }
+    
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0;
+                width: 100%;
+                padding:0;
+                background:none;
+                position:unset;
+            }
+    
+            .request-invite-btn {
+                display: block;
+                justify-self:end;
+               margin-top: 0; 
+            }
+        }
+    }
+
+ // Features Section
+ .features-cards {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+}
+
+@include breakpoint(700px) {
+     // Latest Articles Section
+     .latest-articles-section {
+        .latest-articles-cards {
+
+                grid-template-areas:'currency restaurant' 
+                'airplane confetti';
+                gap:1.5rem;
+            
+            
+            .currency {
+                grid-area:currency;
+            }
+    
+            .restaurant {
+                grid-area:restaurant;
+            }
+    
+            .airplane {
+                grid-area:airplane;
+            }
+    
+            .confetti {
+                grid-area:confetti;
+            } 
+        }
+    }
+}
+    
+
+// Footer
+@include breakpoint(600px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2,1fr);
+        gap:4rem;
+        
+       .social-links {
+           align-items: end;
+       }
+
+        .footer-links {
+            grid-template-columns: repeat(2,1fr);
+            text-align: left;
+        }
+
+
+
+        .request-invite-copyright {
+            grid-column: span 2;
+
+            .request-invite-btn {
+                margin-top: 0;
+            }
+        }
+    }
+}    

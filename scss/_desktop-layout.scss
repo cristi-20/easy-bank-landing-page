@@ -1,0 +1,143 @@
+@include lg {
+
+.header {
+    background:none;
+    min-height: 10vh;
+}
+
+// Hero Section
+.hero-container {
+
+    .hero-section {
+        justify-items:start;
+        position: relative;
+       
+       .hero-title,.hero-description {
+           text-align: left;
+       }
+      
+    //  Both Background images
+       &:after,&:before {
+           content:'';
+           position: absolute;
+           width: 650px;
+           height: 800px;
+
+           @include breakpoint(1100px) {
+            width: 700px;
+            height: 900px;
+           }
+
+           @include xl {
+            width: 800px;
+                      }
+        }
+
+        // Background Image Behind the Phones
+        &:after {
+            right:-100px;
+            top:-200px;
+            background:url('../images/bg-intro-desktop.svg')  no-repeat;
+            background-size:cover;
+
+            // Responsive Breakpoints
+            @include breakpoint(1100px) {
+                right:-20px;
+                          }
+
+                          @include breakpoint(1250px) {
+                            top:-350px;
+                                      }
+        }
+
+        // Phones Background Image
+      &:before {
+          top:-150px;
+          right:-180px;
+          z-index:1;
+          background:url('../images/image-mockups.png')  no-repeat;
+          background-size:cover;
+          background-position: bottom;
+
+        //   Responsive Breakpoints
+          @include breakpoint(1100px) {
+            right:-100px;
+            top:-200px;
+                      }
+      }
+    }
+       }
+
+       // Features Section
+.features-section {
+    padding-block:5rem;
+
+            .features-text {
+                justify-self:start;
+                justify-items:start;
+                text-align: left;
+
+                .features-description {
+                    max-width: 58ch;
+                }
+            }
+    
+            .features-cards {
+                grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+              
+                .card {
+                    justify-items:start;
+                    text-align: left;
+                }
+            }
+
+            @include breakpoint(1000px) {
+                margin-top: 10rem;
+            }
+        }
+
+         // Latest Articles Section
+     .latest-articles-section {
+        .latest-articles-cards {
+        
+                grid-template-areas:'currency restaurant airplane' 
+                'confetti . .'
+                ;
+            
+                @include xl {
+                    grid-template-areas:'currency restaurant airplane confetti' 
+                    ;
+                    
+                }
+          
+        }
+    }
+}
+
+ //  Footer
+@include breakpoint(1118px) {
+   
+    .footer {
+        .footer-container {
+            grid-template-columns: repeat(3,1fr);
+          
+            .logo-social-links {
+               justify-self:start;
+               justify-items:start;
+            }
+    
+            .footer-links {
+                gap: 6rem;
+               
+            }
+    
+            .request-invite-copyright {
+               grid-column:none;
+               justify-self:end;
+               justify-items:end;
+               
+            }
+        }
+    }
+  
+}

@@ -1,0 +1,160 @@
+// Utility Classes
+// Flexbox
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-space-between {
+    justify-content:space-between;
+}
+
+.flex-space-around {
+    justify-content:space-around;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-start {
+    justify-content: start;
+}
+
+.flex-justify-end {
+ justify-content: end;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-align-start {
+    align-items: start;
+}
+
+.flex-align-end {
+    align-items: end;
+}
+
+.flex-align-space-between {
+    align-items: space-between;
+}
+
+.flex-align-space-around {
+    align-items: space-around;
+}
+
+.gap-1 {
+    gap:1rem;
+}
+
+.gap-15 {
+    gap:1.5rem;
+}
+
+.gap-2 {
+    gap:2rem;
+}
+
+.gap-3 {
+    gap:3rem;
+}
+
+.gap-4 {
+    gap:4rem;
+}
+
+.gap-5 {
+    gap:5rem;
+}
+
+// Grid
+
+.grid {
+    display: grid;
+}
+
+.grid-items-center {
+    justify-items:center;
+}
+
+.grid-items-start {
+    justify-items:start;
+}
+
+.grid-items-end {
+    justify-items:end;
+}
+
+.grid-items-space-between {
+    justify-items:space-between;
+}
+
+.grid-items-space-around {
+    justify-items:space-around;
+}
+
+// Grid Align center
+
+.grid-align-center {
+    align-items:center;
+}
+
+.grid-align-start {
+    align-items:start;
+}
+
+.grid-align-end {
+    align-items:end;
+}
+
+.grid-align-space-between {
+    align-items:space-between;
+}
+
+.grid-align-space-around {
+    align-items:space-around;
+}
+
+// Grid content
+.grid-content-center {
+    justify-content:center;
+}
+
+.grid-content-start {
+    justify-content:start;
+}
+
+.grid-content-end {
+    justify-content:end;
+}
+
+.grid-content-space-between {
+    justify-content:space-between;
+}
+
+.grid-content-space-around {
+    justify-content:space-around;
+}
+
+.display-none {
+    display:none;
+}
+
+.display-block {
+    display:block;
+}
+
+.full-width  {
+    left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}

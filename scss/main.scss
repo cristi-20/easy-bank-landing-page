@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+@import 'reset';
+@import 'colors';
+@import 'utility-classes';
+@import 'breakpoints';
+@import 'mobile-layout';
+@import 'tablet-layout';
+@import 'desktop-layout';
+
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Public Sans', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin-inline:auto;
+    padding:1.5rem;
+}
+
+
+// Call to action Button
+.request-invite-btn {
+    width: 170px;
+    padding-block:.9rem;
+    margin-top: 1.5rem;
+    color:$white;
+    font-weight: 600;
+    background: linear-gradient(90deg, rgba(49,211,92,1) 35%, rgba(43,183,218,1) 80%);
+    border-radius:50px;
+    transition:0.1s ease-in-out;
+    
+    &:hover {
+        opacity:0.4;
+    }
+}
+

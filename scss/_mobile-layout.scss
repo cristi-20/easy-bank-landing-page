@@ -1,0 +1,203 @@
+// Global Styles
+.hero-section,.features-section {
+    text-align: center;
+}
+
+.hero-title,.features-title,.features-card-title,.latest-articles-title,.card-title {
+    color:$darkBlue;
+    font-weight:400;
+}
+
+.features-title,.latest-articles-title {
+    font-size: clamp(2.2rem, 5vw, 2.6rem);
+}
+
+.hero-description,.features-description,.features-card-description,.card-description {
+    max-width: 40ch;
+    color:$grayishBlue;
+}
+
+.latest-articles-section,.features-section{
+ padding-block:5rem;
+}
+
+// Creates mobile navigation background shadow
+.background-shadow {
+    box-shadow: inset 50px 100px 1000px 50px  black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+
+    @include md {
+        display: none;
+    }
+    }
+
+// Mobile Header
+.header {
+    min-height: 45vh;
+    background:url('../images/image-mockups.png')no-repeat,url('../images/bg-intro-mobile.svg')  no-repeat;
+    background-size:cover;
+    background-position: 100% 100%;
+    
+    @include sm {
+        min-height:65vh;
+    }
+
+   // Mobile & Tablets Navigation
+    .nav {
+        position: fixed;
+        top:0;
+        z-index:1000;
+        width: 100%;
+        background:$white;
+       
+        .logo-hamburger-menu {
+         width: 100%;
+            .logo,.close-menu-icon, .menu-icon {
+                cursor:pointer;
+            }
+
+            .logo {
+                width: 150px;
+            }
+    
+            .menu-icon {
+                width: 30px;   
+            }
+        }
+    
+        .nav-links {
+            position: fixed;
+            z-index:100;
+            width: 90%;
+            padding:4rem;
+            margin-top: 4rem;
+            font-weight: 500;
+            text-align: center;
+            background:$white;
+            border-radius:5px;
+
+            .link {
+                color:$darkBlue;
+                transition:0.1s ease-in-out;
+                
+                &:hover {
+                    cursor:pointer;
+                    color:$limeGreen;
+                }
+            }
+        }
+    }
+    
+    // Adds this class to open mobile navigation
+    .open-nav {
+        display: flex;
+    }
+    
+    .request-invite-btn {
+        display: none;
+    }  
+}
+
+// Hero Section
+.hero-section {
+    padding-block:3rem;
+    width: 100%;
+
+    .hero-title {
+ font-size: clamp(2.6rem, 7vw, 3.4rem);
+ max-width: 15ch;
+ 
+    }
+}
+
+// Features Section
+
+.features-section {
+    background-color:hsl(222, 33%, 94%);
+
+    .features-cards {
+        width: 100%;
+    }
+  
+           .card {
+               .features-card-img {
+                   margin-bottom: 1.3rem;
+               }
+
+            .features-card-title {
+                font-size: 1.6rem;
+            }
+           }
+           
+}
+
+// Latest Articles Section
+.latest-articles-section {
+    background:$lightGrayishBlue;
+
+    // Latest Articles Cards
+    .latest-articles-cards {
+        width: 100%;
+        .card {
+            background:$white;
+            max-width: 400px;
+            grid-template-rows: max-content;
+           
+            .card-image {
+                height: 250px;
+                width: 100%;
+            }
+
+            .card-body {
+                padding:2rem;
+            }
+
+                .card-author {
+                    color:$grayishBlue;
+                    font-size: 1rem;
+                       }
+           
+                       .card-title {
+                   font-size: 1.6rem;
+                       }
+        }
+       
+    }
+}
+
+// Footer
+.footer {
+    background:$darkBlue;
+    
+    .container {
+        padding-block:3rem;
+    }
+
+    .social-links {
+        color:$white;
+        font-size: 1.7rem;
+
+        li:hover  {
+            color:$limeGreen;
+            cursor:pointer;
+        }
+    }
+
+    .footer-links {
+        text-align: center;
+        color:$white;
+
+        li:hover  {
+            color:$limeGreen;
+            cursor:pointer;
+        }
+    
+    }
+
+    .footer-copyright {
+        color:$grayishBlue;
+    }
+}
